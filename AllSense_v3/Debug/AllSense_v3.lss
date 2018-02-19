@@ -1,0 +1,1311 @@
+
+AllSense_v3.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000062a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00802000  00802000  0000069e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000106  00802000  00802000  0000069e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000069e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000006d0  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000f8  00000000  00000000  00000710  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000044fc  00000000  00000000  00000808  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00002c5b  00000000  00000000  00004d04  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000dc2  00000000  00000000  0000795f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001c8  00000000  00000000  00008724  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000039c5  00000000  00000000  000088ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000002e6  00000000  00000000  0000c2b1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000a8  00000000  00000000  0000c597  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 00 01 	jmp	0x200	; 0x200 <__dtors_end>
+   4:	0c 94 4a 01 	jmp	0x294	; 0x294 <__vector_1>
+   8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+   c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  10:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  14:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  18:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  1c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  20:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  24:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  28:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  2c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  30:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  34:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  38:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  3c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  40:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  44:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  48:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  4c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  50:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  54:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  58:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  5c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  60:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  64:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  68:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  6c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  70:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  74:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  78:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  7c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  80:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  84:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  88:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  8c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  90:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  94:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  98:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  9c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  a0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  a4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  a8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  ac:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  b0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  b4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  b8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  bc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  c0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  c4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  c8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  cc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  d0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  d4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  d8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  dc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  e0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  e4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  e8:	0c 94 f6 01 	jmp	0x3ec	; 0x3ec <__vector_58>
+  ec:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  f0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  f4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  f8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+  fc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 100:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 104:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 108:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 10c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 110:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 114:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 118:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 11c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 120:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 124:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 128:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 12c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 130:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 134:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 138:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 13c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 140:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 144:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 148:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 14c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 150:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 154:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 158:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 15c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 160:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 164:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 168:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 16c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 170:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 174:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 178:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 17c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 180:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 184:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 188:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 18c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 190:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 194:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 198:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 19c:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1a0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1a4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1a8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1ac:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1b0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1b4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1b8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1bc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1c0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1c4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1c8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1cc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1d0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1d4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1d8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1dc:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1e0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1e4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1e8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1ec:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1f0:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1f4:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+ 1f8:	0c 94 1d 01 	jmp	0x23a	; 0x23a <__bad_interrupt>
+
+000001fc <__ctors_start>:
+ 1fc:	1c 02       	muls	r17, r28
+
+000001fe <__ctors_end>:
+ 1fe:	25 02       	muls	r18, r21
+
+00000200 <__dtors_end>:
+ 200:	11 24       	eor	r1, r1
+ 202:	1f be       	out	0x3f, r1	; 63
+ 204:	cf ef       	ldi	r28, 0xFF	; 255
+ 206:	cd bf       	out	0x3d, r28	; 61
+ 208:	df e2       	ldi	r29, 0x2F	; 47
+ 20a:	de bf       	out	0x3e, r29	; 62
+
+0000020c <__do_clear_bss>:
+ 20c:	21 e2       	ldi	r18, 0x21	; 33
+ 20e:	a0 e0       	ldi	r26, 0x00	; 0
+ 210:	b0 e2       	ldi	r27, 0x20	; 32
+ 212:	01 c0       	rjmp	.+2      	; 0x216 <.do_clear_bss_start>
+
+00000214 <.do_clear_bss_loop>:
+ 214:	1d 92       	st	X+, r1
+
+00000216 <.do_clear_bss_start>:
+ 216:	a6 30       	cpi	r26, 0x06	; 6
+ 218:	b2 07       	cpc	r27, r18
+ 21a:	e1 f7       	brne	.-8      	; 0x214 <.do_clear_bss_loop>
+
+0000021c <__do_global_ctors>:
+ 21c:	10 e0       	ldi	r17, 0x00	; 0
+ 21e:	cf ef       	ldi	r28, 0xFF	; 255
+ 220:	d0 e0       	ldi	r29, 0x00	; 0
+ 222:	04 c0       	rjmp	.+8      	; 0x22c <__do_global_ctors+0x10>
+ 224:	21 97       	sbiw	r28, 0x01	; 1
+ 226:	fe 01       	movw	r30, r28
+ 228:	0e 94 02 03 	call	0x604	; 0x604 <__tablejump2__>
+ 22c:	ce 3f       	cpi	r28, 0xFE	; 254
+ 22e:	d1 07       	cpc	r29, r17
+ 230:	c9 f7       	brne	.-14     	; 0x224 <__do_global_ctors+0x8>
+ 232:	0e 94 e3 01 	call	0x3c6	; 0x3c6 <main>
+ 236:	0c 94 08 03 	jmp	0x610	; 0x610 <__do_global_dtors>
+
+0000023a <__bad_interrupt>:
+ 23a:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000023e <_Z18system_clocks_initv>:
+void system_clocks_init(void)
+{
+	unsigned char n, s;
+
+	// Save interrupts enabled/disabled state
+	s = SREG;
+ 23e:	2f b7       	in	r18, 0x3f	; 63
+	// Disable interrupts
+
+	// External 7372.800 kHz oscillator initialization
+	// Crystal oscillator increased drive current: Off
+	// External Clock Source - Startup Time: 0.4-16 MHz Quartz Crystal - 16k CLK
+	OSC.XOSCCTRL = OSC_FRQRANGE_2TO9_gc | OSC_XOSCSEL_XTAL_16KCLK_gc;
+ 240:	e0 e5       	ldi	r30, 0x50	; 80
+ 242:	f0 e0       	ldi	r31, 0x00	; 0
+ 244:	8b e4       	ldi	r24, 0x4B	; 75
+ 246:	82 83       	std	Z+2, r24	; 0x02
+	// Enable the external oscillator/clock source
+	OSC.CTRL |= OSC_XOSCEN_bm;
+ 248:	80 81       	ld	r24, Z
+ 24a:	88 60       	ori	r24, 0x08	; 8
+ 24c:	80 83       	st	Z, r24
+	// Wait for the external oscillator to stabilize
+	while ((OSC.STATUS & OSC_XOSCRDY_bm) == 0);
+ 24e:	81 81       	ldd	r24, Z+1	; 0x01
+ 250:	83 ff       	sbrs	r24, 3
+ 252:	fd cf       	rjmp	.-6      	; 0x24e <_Z18system_clocks_initv+0x10>
+	// System Clock prescalers B & C division factors: B:1, C:1
+	// ClkPer4: 7372.800 kHz
+	// ClkPer2: 7372.800 kHz
+	// ClkPer:  7372.800 kHz
+	// ClkCPU:  7372.800 kHz
+	n = (CLK.PSCTRL & (~(CLK_PSADIV_gm | CLK_PSBCDIV1_bm | CLK_PSBCDIV0_bm))) |
+ 254:	e0 e4       	ldi	r30, 0x40	; 64
+ 256:	f0 e0       	ldi	r31, 0x00	; 0
+ 258:	81 81       	ldd	r24, Z+1	; 0x01
+		CLK_PSADIV_1_gc | CLK_PSBCDIV_1_1_gc;
+ 25a:	80 78       	andi	r24, 0x80	; 128
+	CCP = CCP_IOREG_gc;
+ 25c:	98 ed       	ldi	r25, 0xD8	; 216
+ 25e:	94 bf       	out	0x34, r25	; 52
+	CLK.PSCTRL = n;
+ 260:	81 83       	std	Z+1, r24	; 0x01
+
+	// Select the system clock source: External Oscillator or Clock
+	n = (CLK.CTRL & (~CLK_SCLKSEL_gm)) | CLK_SCLKSEL_XOSC_gc;
+ 262:	80 81       	ld	r24, Z
+ 264:	88 7f       	andi	r24, 0xF8	; 248
+ 266:	83 60       	ori	r24, 0x03	; 3
+	CCP = CCP_IOREG_gc;
+ 268:	94 bf       	out	0x34, r25	; 52
+	CLK.CTRL = n;
+ 26a:	80 83       	st	Z, r24
+
+	// Disable the unused oscillators: 32 kHz, 2 MHz, 32 MHz, PLL
+	OSC.CTRL &= ~(OSC_RC32KEN_bm | OSC_RC2MEN_bm | OSC_RC32MEN_bm | OSC_PLLEN_bm);
+ 26c:	e0 e5       	ldi	r30, 0x50	; 80
+ 26e:	f0 e0       	ldi	r31, 0x00	; 0
+ 270:	80 81       	ld	r24, Z
+ 272:	88 7e       	andi	r24, 0xE8	; 232
+ 274:	80 83       	st	Z, r24
+
+	// ClkPer output disabled
+	PORTCFG.CLKEVOUT &= ~(PORTCFG_CLKOUTSEL_gm | PORTCFG_CLKOUT_gm);
+ 276:	a0 eb       	ldi	r26, 0xB0	; 176
+ 278:	b0 e0       	ldi	r27, 0x00	; 0
+ 27a:	14 96       	adiw	r26, 0x04	; 4
+ 27c:	8c 91       	ld	r24, X
+ 27e:	14 97       	sbiw	r26, 0x04	; 4
+ 280:	80 7f       	andi	r24, 0xF0	; 240
+ 282:	14 96       	adiw	r26, 0x04	; 4
+ 284:	8c 93       	st	X, r24
+	// PLL fault detection: Off
+	// External clock source failure detection: On
+	n = (OSC.XOSCFAIL & (~(OSC_PLLFDEN_bm | OSC_XOSCFDEN_bm))) | OSC_XOSCFDEN_bm;
+ 286:	83 81       	ldd	r24, Z+3	; 0x03
+ 288:	8a 7f       	andi	r24, 0xFA	; 250
+ 28a:	81 60       	ori	r24, 0x01	; 1
+	CCP = CCP_IOREG_gc;
+ 28c:	94 bf       	out	0x34, r25	; 52
+	OSC.XOSCFAIL = n;
+ 28e:	83 83       	std	Z+3, r24	; 0x03
+
+	// Restore interrupts enabled/disabled state
+	SREG = s;
+ 290:	2f bf       	out	0x3f, r18	; 63
+ 292:	08 95       	ret
+
+00000294 <__vector_1>:
+}
+
+// Oscillator failure non-maskable interrupt
+ISR(OSC_OSCF_vect)
+{
+ 294:	1f 92       	push	r1
+ 296:	0f 92       	push	r0
+ 298:	0f b6       	in	r0, 0x3f	; 63
+ 29a:	0f 92       	push	r0
+ 29c:	11 24       	eor	r1, r1
+ 29e:	8f 93       	push	r24
+ 2a0:	ef 93       	push	r30
+ 2a2:	ff 93       	push	r31
+	if (OSC.XOSCFAIL & OSC_XOSCFDIF_bm)
+ 2a4:	80 91 53 00 	lds	r24, 0x0053	; 0x800053 <__TEXT_REGION_LENGTH__+0x700053>
+ 2a8:	81 ff       	sbrs	r24, 1
+ 2aa:	05 c0       	rjmp	.+10     	; 0x2b6 <__vector_1+0x22>
+		{
+		// External clock source failure detected
+		// Clear the failure detection interrupt flag
+		OSC.XOSCFAIL |= OSC_XOSCFDIF_bm;
+ 2ac:	e0 e5       	ldi	r30, 0x50	; 80
+ 2ae:	f0 e0       	ldi	r31, 0x00	; 0
+ 2b0:	83 81       	ldd	r24, Z+3	; 0x03
+ 2b2:	82 60       	ori	r24, 0x02	; 2
+ 2b4:	83 83       	std	Z+3, r24	; 0x03
+		// Write your code here
+
+		}
+}
+ 2b6:	ff 91       	pop	r31
+ 2b8:	ef 91       	pop	r30
+ 2ba:	8f 91       	pop	r24
+ 2bc:	0f 90       	pop	r0
+ 2be:	0f be       	out	0x3f, r0	; 63
+ 2c0:	0f 90       	pop	r0
+ 2c2:	1f 90       	pop	r1
+ 2c4:	18 95       	reti
+
+000002c6 <_Z17event_system_initv>:
+
+// Event System initialization
+void event_system_init(void)
+{
+	// Event System Channel 0 source: None
+	EVSYS.CH0MUX = EVSYS_CHMUX_OFF_gc;
+ 2c6:	e0 e8       	ldi	r30, 0x80	; 128
+ 2c8:	f1 e0       	ldi	r31, 0x01	; 1
+ 2ca:	10 82       	st	Z, r1
+	// Event System Channel 1 source: None
+	EVSYS.CH1MUX = EVSYS_CHMUX_OFF_gc;
+ 2cc:	11 82       	std	Z+1, r1	; 0x01
+	// Event System Channel 2 source: None
+	EVSYS.CH2MUX = EVSYS_CHMUX_OFF_gc;
+ 2ce:	12 82       	std	Z+2, r1	; 0x02
+	// Event System Channel 3 source: None
+	EVSYS.CH3MUX = EVSYS_CHMUX_OFF_gc;
+ 2d0:	13 82       	std	Z+3, r1	; 0x03
+	// Event System Channel 4 source: None
+	EVSYS.CH4MUX = EVSYS_CHMUX_OFF_gc;
+ 2d2:	14 82       	std	Z+4, r1	; 0x04
+	// Event System Channel 5 source: None
+	EVSYS.CH5MUX = EVSYS_CHMUX_OFF_gc;
+ 2d4:	15 82       	std	Z+5, r1	; 0x05
+	// Event System Channel 6 source: None
+	EVSYS.CH6MUX = EVSYS_CHMUX_OFF_gc;
+ 2d6:	16 82       	std	Z+6, r1	; 0x06
+	// Event System Channel 7 source: None
+	EVSYS.CH7MUX = EVSYS_CHMUX_OFF_gc;
+ 2d8:	17 82       	std	Z+7, r1	; 0x07
+
+	// Event System Channel 0 Digital Filter Coefficient: 1 Sample
+	// Quadrature Decoder: Off
+	EVSYS.CH0CTRL = (EVSYS.CH0CTRL & (~(EVSYS_QDIRM_gm | EVSYS_QDIEN_bm | EVSYS_QDEN_bm | EVSYS_DIGFILT_gm))) |
+ 2da:	80 85       	ldd	r24, Z+8	; 0x08
+					EVSYS_DIGFILT_1SAMPLE_gc;
+ 2dc:	80 78       	andi	r24, 0x80	; 128
+ 2de:	80 87       	std	Z+8, r24	; 0x08
+	// Event System Channel 1 Digital Filter Coefficient: 1 Sample
+	EVSYS.CH1CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 2e0:	11 86       	std	Z+9, r1	; 0x09
+	// Event System Channel 2 Digital Filter Coefficient: 1 Sample
+	// Quadrature Decoder: Off
+	EVSYS.CH2CTRL = (EVSYS.CH2CTRL & (~(EVSYS_QDIRM_gm | EVSYS_QDIEN_bm | EVSYS_QDEN_bm | EVSYS_DIGFILT_gm))) |
+ 2e2:	82 85       	ldd	r24, Z+10	; 0x0a
+					EVSYS_DIGFILT_1SAMPLE_gc;
+ 2e4:	80 78       	andi	r24, 0x80	; 128
+ 2e6:	82 87       	std	Z+10, r24	; 0x0a
+	// Event System Channel 3 Digital Filter Coefficient: 1 Sample
+	EVSYS.CH3CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 2e8:	13 86       	std	Z+11, r1	; 0x0b
+	// Event System Channel 4 Digital Filter Coefficient: 1 Sample
+	// Quadrature Decoder: Off
+	EVSYS.CH4CTRL = (EVSYS.CH4CTRL & (~(EVSYS_QDIRM_gm | EVSYS_QDIEN_bm | EVSYS_QDEN_bm | EVSYS_DIGFILT_gm))) |
+ 2ea:	84 85       	ldd	r24, Z+12	; 0x0c
+					EVSYS_DIGFILT_1SAMPLE_gc;
+ 2ec:	80 78       	andi	r24, 0x80	; 128
+ 2ee:	84 87       	std	Z+12, r24	; 0x0c
+	// Event System Channel 5 Digital Filter Coefficient: 1 Sample
+	EVSYS.CH5CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 2f0:	15 86       	std	Z+13, r1	; 0x0d
+	// Event System Channel 6 Digital Filter Coefficient: 1 Sample
+	EVSYS.CH6CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 2f2:	16 86       	std	Z+14, r1	; 0x0e
+	// Event System Channel 7 Digital Filter Coefficient: 1 Sample
+	EVSYS.CH7CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 2f4:	17 86       	std	Z+15, r1	; 0x0f
+
+	// Event System Channel output: Disabled
+	PORTCFG.CLKEVOUT &= ~PORTCFG_EVOUT_gm;
+ 2f6:	e0 eb       	ldi	r30, 0xB0	; 176
+ 2f8:	f0 e0       	ldi	r31, 0x00	; 0
+ 2fa:	84 81       	ldd	r24, Z+4	; 0x04
+ 2fc:	8f 7c       	andi	r24, 0xCF	; 207
+ 2fe:	84 83       	std	Z+4, r24	; 0x04
+	PORTCFG.EVOUTSEL &= ~PORTCFG_EVOUTSEL_gm;
+ 300:	86 81       	ldd	r24, Z+6	; 0x06
+ 302:	88 7f       	andi	r24, 0xF8	; 248
+ 304:	86 83       	std	Z+6, r24	; 0x06
+ 306:	08 95       	ret
+
+00000308 <_Z4loopv>:
+		loop();
+    }
+}
+
+void loop() {
+	if (debug.available()) {
+ 308:	80 e0       	ldi	r24, 0x00	; 0
+ 30a:	90 e2       	ldi	r25, 0x20	; 32
+ 30c:	0e 94 f7 02 	call	0x5ee	; 0x5ee <_ZN6Serial9availableEv>
+ 310:	88 23       	and	r24, r24
+ 312:	09 f4       	brne	.+2      	; 0x316 <_Z4loopv+0xe>
+ 314:	57 c0       	rjmp	.+174    	; 0x3c4 <_Z4loopv+0xbc>
+		uint8_t c = debug.read();
+ 316:	80 e0       	ldi	r24, 0x00	; 0
+ 318:	90 e2       	ldi	r25, 0x20	; 32
+ 31a:	0e 94 e1 02 	call	0x5c2	; 0x5c2 <_ZN6Serial4readEv>
+		switch (c) {
+ 31e:	88 34       	cpi	r24, 0x48	; 72
+ 320:	21 f5       	brne	.+72     	; 0x36a <_Z4loopv+0x62>
+			case 'H':
+				debug.write('H');
+ 322:	68 e4       	ldi	r22, 0x48	; 72
+ 324:	80 e0       	ldi	r24, 0x00	; 0
+ 326:	90 e2       	ldi	r25, 0x20	; 32
+ 328:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('e');
+ 32c:	65 e6       	ldi	r22, 0x65	; 101
+ 32e:	80 e0       	ldi	r24, 0x00	; 0
+ 330:	90 e2       	ldi	r25, 0x20	; 32
+ 332:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('l');
+ 336:	6c e6       	ldi	r22, 0x6C	; 108
+ 338:	80 e0       	ldi	r24, 0x00	; 0
+ 33a:	90 e2       	ldi	r25, 0x20	; 32
+ 33c:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('l');
+ 340:	6c e6       	ldi	r22, 0x6C	; 108
+ 342:	80 e0       	ldi	r24, 0x00	; 0
+ 344:	90 e2       	ldi	r25, 0x20	; 32
+ 346:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('o');
+ 34a:	6f e6       	ldi	r22, 0x6F	; 111
+ 34c:	80 e0       	ldi	r24, 0x00	; 0
+ 34e:	90 e2       	ldi	r25, 0x20	; 32
+ 350:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('\r');
+ 354:	6d e0       	ldi	r22, 0x0D	; 13
+ 356:	80 e0       	ldi	r24, 0x00	; 0
+ 358:	90 e2       	ldi	r25, 0x20	; 32
+ 35a:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('\n');
+ 35e:	6a e0       	ldi	r22, 0x0A	; 10
+ 360:	80 e0       	ldi	r24, 0x00	; 0
+ 362:	90 e2       	ldi	r25, 0x20	; 32
+ 364:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+			break;
+ 368:	08 95       	ret
+			default:
+				debug.write('U');
+ 36a:	65 e5       	ldi	r22, 0x55	; 85
+ 36c:	80 e0       	ldi	r24, 0x00	; 0
+ 36e:	90 e2       	ldi	r25, 0x20	; 32
+ 370:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('n');
+ 374:	6e e6       	ldi	r22, 0x6E	; 110
+ 376:	80 e0       	ldi	r24, 0x00	; 0
+ 378:	90 e2       	ldi	r25, 0x20	; 32
+ 37a:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('k');
+ 37e:	6b e6       	ldi	r22, 0x6B	; 107
+ 380:	80 e0       	ldi	r24, 0x00	; 0
+ 382:	90 e2       	ldi	r25, 0x20	; 32
+ 384:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('n');
+ 388:	6e e6       	ldi	r22, 0x6E	; 110
+ 38a:	80 e0       	ldi	r24, 0x00	; 0
+ 38c:	90 e2       	ldi	r25, 0x20	; 32
+ 38e:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('o');
+ 392:	6f e6       	ldi	r22, 0x6F	; 111
+ 394:	80 e0       	ldi	r24, 0x00	; 0
+ 396:	90 e2       	ldi	r25, 0x20	; 32
+ 398:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('w');
+ 39c:	67 e7       	ldi	r22, 0x77	; 119
+ 39e:	80 e0       	ldi	r24, 0x00	; 0
+ 3a0:	90 e2       	ldi	r25, 0x20	; 32
+ 3a2:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('n');
+ 3a6:	6e e6       	ldi	r22, 0x6E	; 110
+ 3a8:	80 e0       	ldi	r24, 0x00	; 0
+ 3aa:	90 e2       	ldi	r25, 0x20	; 32
+ 3ac:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('\r');
+ 3b0:	6d e0       	ldi	r22, 0x0D	; 13
+ 3b2:	80 e0       	ldi	r24, 0x00	; 0
+ 3b4:	90 e2       	ldi	r25, 0x20	; 32
+ 3b6:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+				debug.write('\n');
+ 3ba:	6a e0       	ldi	r22, 0x0A	; 10
+ 3bc:	80 e0       	ldi	r24, 0x00	; 0
+ 3be:	90 e2       	ldi	r25, 0x20	; 32
+ 3c0:	0e 94 da 02 	call	0x5b4	; 0x5b4 <_ZN6Serial5writeEh>
+ 3c4:	08 95       	ret
+
+000003c6 <main>:
+
+int main(void)
+{
+	// Interrupt system initialization
+	// Make sure the interrupts are disabled
+	cli();
+ 3c6:	f8 94       	cli
+	// Low level interrupt: On
+	// The interrupt vectors will be placed at the start of the Application FLASH section
+	PMIC.CTRL = (PMIC.CTRL & (~(PMIC_RREN_bm | PMIC_IVSEL_bm | PMIC_HILVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_LOLVLEN_bm))) | PMIC_LOLVLEN_bm;
+ 3c8:	e0 ea       	ldi	r30, 0xA0	; 160
+ 3ca:	f0 e0       	ldi	r31, 0x00	; 0
+ 3cc:	82 81       	ldd	r24, Z+2	; 0x02
+ 3ce:	88 73       	andi	r24, 0x38	; 56
+ 3d0:	81 60       	ori	r24, 0x01	; 1
+ 3d2:	82 83       	std	Z+2, r24	; 0x02
+
+	// System clocks initialization
+	system_clocks_init();
+ 3d4:	0e 94 1f 01 	call	0x23e	; 0x23e <_Z18system_clocks_initv>
+
+	// Event system initialization
+	event_system_init();
+ 3d8:	0e 94 63 01 	call	0x2c6	; 0x2c6 <_Z17event_system_initv>
+
+	// Ports initialization
+	ports_init();
+ 3dc:	0e 94 2a 02 	call	0x454	; 0x454 <_Z10ports_initv>
+
+	// Virtual Ports initialization
+	vports_init();
+ 3e0:	0e 94 85 02 	call	0x50a	; 0x50a <_Z11vports_initv>
+	
+	// Enable interrupts
+	sei();
+ 3e4:	78 94       	sei
+	
+    /* Replace with your application code */
+    while (1) 
+    {
+		loop();
+ 3e6:	0e 94 84 01 	call	0x308	; 0x308 <_Z4loopv>
+ 3ea:	fd cf       	rjmp	.-6      	; 0x3e6 <main+0x20>
+
+000003ec <__vector_58>:
+		}
+	}
+}
+
+ISR(USARTE0_RXC_vect)
+{
+ 3ec:	1f 92       	push	r1
+ 3ee:	0f 92       	push	r0
+ 3f0:	0f b6       	in	r0, 0x3f	; 63
+ 3f2:	0f 92       	push	r0
+ 3f4:	11 24       	eor	r1, r1
+ 3f6:	2f 93       	push	r18
+ 3f8:	3f 93       	push	r19
+ 3fa:	4f 93       	push	r20
+ 3fc:	5f 93       	push	r21
+ 3fe:	6f 93       	push	r22
+ 400:	7f 93       	push	r23
+ 402:	8f 93       	push	r24
+ 404:	9f 93       	push	r25
+ 406:	af 93       	push	r26
+ 408:	bf 93       	push	r27
+ 40a:	ef 93       	push	r30
+ 40c:	ff 93       	push	r31
+	debug.recv();
+ 40e:	80 e0       	ldi	r24, 0x00	; 0
+ 410:	90 e2       	ldi	r25, 0x20	; 32
+ 412:	0e 94 bf 02 	call	0x57e	; 0x57e <_ZN6Serial4recvEv>
+}
+ 416:	ff 91       	pop	r31
+ 418:	ef 91       	pop	r30
+ 41a:	bf 91       	pop	r27
+ 41c:	af 91       	pop	r26
+ 41e:	9f 91       	pop	r25
+ 420:	8f 91       	pop	r24
+ 422:	7f 91       	pop	r23
+ 424:	6f 91       	pop	r22
+ 426:	5f 91       	pop	r21
+ 428:	4f 91       	pop	r20
+ 42a:	3f 91       	pop	r19
+ 42c:	2f 91       	pop	r18
+ 42e:	0f 90       	pop	r0
+ 430:	0f be       	out	0x3f, r0	; 63
+ 432:	0f 90       	pop	r0
+ 434:	1f 90       	pop	r1
+ 436:	18 95       	reti
+
+00000438 <_GLOBAL__sub_I_debug>:
+#include "event_system_init.h"
+#include "clock_init.h"
+#include "ports_init.h"
+#include "serial.h"
+
+Serial debug(&USARTE0, &PORTE);
+ 438:	40 e8       	ldi	r20, 0x80	; 128
+ 43a:	56 e0       	ldi	r21, 0x06	; 6
+ 43c:	60 ea       	ldi	r22, 0xA0	; 160
+ 43e:	7a e0       	ldi	r23, 0x0A	; 10
+ 440:	80 e0       	ldi	r24, 0x00	; 0
+ 442:	90 e2       	ldi	r25, 0x20	; 32
+ 444:	0e 94 8c 02 	call	0x518	; 0x518 <_ZN6SerialC1EP12USART_structP11PORT_struct>
+ 448:	08 95       	ret
+
+0000044a <_GLOBAL__sub_D_debug>:
+ 44a:	80 e0       	ldi	r24, 0x00	; 0
+ 44c:	90 e2       	ldi	r25, 0x20	; 32
+ 44e:	0e 94 be 02 	call	0x57c	; 0x57c <_ZN6SerialD1Ev>
+ 452:	08 95       	ret
+
+00000454 <_Z10ports_initv>:
+// Ports initialization
+void ports_init(void)
+{
+	// PORTA initialization
+	// OUT register
+	PORTA.OUT = 0x00;
+ 454:	e0 e0       	ldi	r30, 0x00	; 0
+ 456:	f6 e0       	ldi	r31, 0x06	; 6
+ 458:	14 82       	std	Z+4, r1	; 0x04
+	// Pin3: Input
+	// Pin4: Input
+	// Pin5: Input
+	// Pin6: Input
+	// Pin7: Input
+	PORTA.DIR = 0x00;
+ 45a:	10 82       	st	Z, r1
+	// Pin0 Output/Pull configuration: Totempole/No
+	// Pin0 Input/Sense configuration: Sense both edges
+	// Pin0 Inverted: Off
+	// Pin0 Slew Rate Limitation: Off
+	PORTA.PIN0CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 45c:	10 8a       	std	Z+16, r1	; 0x10
+	// Pin1 Output/Pull configuration: Totempole/No
+	// Pin1 Input/Sense configuration: Sense both edges
+	// Pin1 Inverted: Off
+	// Pin1 Slew Rate Limitation: Off
+	PORTA.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 45e:	11 8a       	std	Z+17, r1	; 0x11
+	// Pin2 Output/Pull configuration: Totempole/No
+	// Pin2 Input/Sense configuration: Sense both edges
+	// Pin2 Inverted: Off
+	// Pin2 Slew Rate Limitation: Off
+	PORTA.PIN2CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 460:	12 8a       	std	Z+18, r1	; 0x12
+	// Pin3 Output/Pull configuration: Totempole/No
+	// Pin3 Input/Sense configuration: Sense both edges
+	// Pin3 Inverted: Off
+	// Pin3 Slew Rate Limitation: Off
+	PORTA.PIN3CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 462:	13 8a       	std	Z+19, r1	; 0x13
+	// Pin4 Output/Pull configuration: Totempole/No
+	// Pin4 Input/Sense configuration: Sense both edges
+	// Pin4 Inverted: Off
+	// Pin4 Slew Rate Limitation: Off
+	PORTA.PIN4CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 464:	14 8a       	std	Z+20, r1	; 0x14
+	// Pin5 Output/Pull configuration: Totempole/No
+	// Pin5 Input/Sense configuration: Sense both edges
+	// Pin5 Inverted: Off
+	// Pin5 Slew Rate Limitation: Off
+	PORTA.PIN5CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 466:	15 8a       	std	Z+21, r1	; 0x15
+	// Pin6 Output/Pull configuration: Totempole/No
+	// Pin6 Input/Sense configuration: Sense both edges
+	// Pin6 Inverted: Off
+	// Pin6 Slew Rate Limitation: Off
+	PORTA.PIN6CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 468:	16 8a       	std	Z+22, r1	; 0x16
+	// Pin7 Output/Pull configuration: Totempole/No
+	// Pin7 Input/Sense configuration: Sense both edges
+	// Pin7 Inverted: Off
+	// Pin7 Slew Rate Limitation: Off
+	PORTA.PIN7CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 46a:	17 8a       	std	Z+23, r1	; 0x17
+	// Interrupt 0 level: Disabled
+	// Interrupt 1 level: Disabled
+	PORTA.INTCTRL = (PORTA.INTCTRL & (~(PORT_INT1LVL_gm | PORT_INT0LVL_gm))) |
+ 46c:	81 85       	ldd	r24, Z+9	; 0x09
+					PORT_INT1LVL_OFF_gc | PORT_INT0LVL_OFF_gc;
+ 46e:	80 7f       	andi	r24, 0xF0	; 240
+ 470:	81 87       	std	Z+9, r24	; 0x09
+	// Pin3 Pin Change interrupt 0: Off
+	// Pin4 Pin Change interrupt 0: Off
+	// Pin5 Pin Change interrupt 0: Off
+	// Pin6 Pin Change interrupt 0: Off
+	// Pin7 Pin Change interrupt 0: Off
+	PORTA.INT0MASK = 0x00;
+ 472:	12 86       	std	Z+10, r1	; 0x0a
+	// Pin3 Pin Change interrupt 1: Off
+	// Pin4 Pin Change interrupt 1: Off
+	// Pin5 Pin Change interrupt 1: Off
+	// Pin6 Pin Change interrupt 1: Off
+	// Pin7 Pin Change interrupt 1: Off
+	PORTA.INT1MASK = 0x00;
+ 474:	13 86       	std	Z+11, r1	; 0x0b
+
+	// PORTB initialization
+	// OUT register
+	PORTB.OUT = 0x00;
+ 476:	e0 e2       	ldi	r30, 0x20	; 32
+ 478:	f6 e0       	ldi	r31, 0x06	; 6
+ 47a:	14 82       	std	Z+4, r1	; 0x04
+	// Pin0: Input
+	// Pin1: Input
+	// Pin2: Input
+	// Pin3: Input
+	PORTB.DIR = 0x00;
+ 47c:	10 82       	st	Z, r1
+	// Pin0 Output/Pull configuration: Totempole/No
+	// Pin0 Input/Sense configuration: Sense both edges
+	// Pin0 Inverted: Off
+	// Pin0 Slew Rate Limitation: Off
+	PORTB.PIN0CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 47e:	10 8a       	std	Z+16, r1	; 0x10
+	// Pin1 Output/Pull configuration: Totempole/No
+	// Pin1 Input/Sense configuration: Sense both edges
+	// Pin1 Inverted: Off
+	// Pin1 Slew Rate Limitation: Off
+	PORTB.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 480:	11 8a       	std	Z+17, r1	; 0x11
+	// Pin2 Output/Pull configuration: Totempole/No
+	// Pin2 Input/Sense configuration: Sense both edges
+	// Pin2 Inverted: Off
+	// Pin2 Slew Rate Limitation: Off
+	PORTB.PIN2CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 482:	12 8a       	std	Z+18, r1	; 0x12
+	// Pin3 Output/Pull configuration: Totempole/No
+	// Pin3 Input/Sense configuration: Sense both edges
+	// Pin3 Inverted: Off
+	// Pin3 Slew Rate Limitation: Off
+	PORTB.PIN3CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 484:	13 8a       	std	Z+19, r1	; 0x13
+	// Interrupt 0 level: Disabled
+	// Interrupt 1 level: Disabled
+	PORTB.INTCTRL = (PORTB.INTCTRL & (~(PORT_INT1LVL_gm | PORT_INT0LVL_gm))) |
+ 486:	81 85       	ldd	r24, Z+9	; 0x09
+					PORT_INT1LVL_OFF_gc | PORT_INT0LVL_OFF_gc;
+ 488:	80 7f       	andi	r24, 0xF0	; 240
+ 48a:	81 87       	std	Z+9, r24	; 0x09
+	// Pin0 Pin Change interrupt 0: Off
+	// Pin1 Pin Change interrupt 0: Off
+	// Pin2 Pin Change interrupt 0: Off
+	// Pin3 Pin Change interrupt 0: Off
+	PORTB.INT0MASK = 0x00;
+ 48c:	12 86       	std	Z+10, r1	; 0x0a
+	// Pin0 Pin Change interrupt 1: Off
+	// Pin1 Pin Change interrupt 1: Off
+	// Pin2 Pin Change interrupt 1: Off
+	// Pin3 Pin Change interrupt 1: Off
+	PORTB.INT1MASK = 0x00;
+ 48e:	13 86       	std	Z+11, r1	; 0x0b
+
+	// PORTC initialization
+	// OUT register
+	PORTC.OUT = 0x00;
+ 490:	e0 e4       	ldi	r30, 0x40	; 64
+ 492:	f6 e0       	ldi	r31, 0x06	; 6
+ 494:	14 82       	std	Z+4, r1	; 0x04
+	// Pin3: Input
+	// Pin4: Input
+	// Pin5: Input
+	// Pin6: Input
+	// Pin7: Input
+	PORTC.DIR = 0x00;
+ 496:	10 82       	st	Z, r1
+	// Pin0 Output/Pull configuration: Totempole/No
+	// Pin0 Input/Sense configuration: Sense both edges
+	// Pin0 Inverted: Off
+	// Pin0 Slew Rate Limitation: Off
+	PORTC.PIN0CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 498:	10 8a       	std	Z+16, r1	; 0x10
+	// Pin1 Output/Pull configuration: Totempole/No
+	// Pin1 Input/Sense configuration: Sense both edges
+	// Pin1 Inverted: Off
+	// Pin1 Slew Rate Limitation: Off
+	PORTC.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 49a:	11 8a       	std	Z+17, r1	; 0x11
+	// Pin2 Output/Pull configuration: Totempole/No
+	// Pin2 Input/Sense configuration: Sense both edges
+	// Pin2 Inverted: Off
+	// Pin2 Slew Rate Limitation: Off
+	PORTC.PIN2CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 49c:	12 8a       	std	Z+18, r1	; 0x12
+	// Pin3 Output/Pull configuration: Totempole/No
+	// Pin3 Input/Sense configuration: Sense both edges
+	// Pin3 Inverted: Off
+	// Pin3 Slew Rate Limitation: Off
+	PORTC.PIN3CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 49e:	13 8a       	std	Z+19, r1	; 0x13
+	// Pin4 Output/Pull configuration: Totempole/No
+	// Pin4 Input/Sense configuration: Sense both edges
+	// Pin4 Inverted: Off
+	// Pin4 Slew Rate Limitation: Off
+	PORTC.PIN4CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4a0:	14 8a       	std	Z+20, r1	; 0x14
+	// Pin5 Output/Pull configuration: Totempole/No
+	// Pin5 Input/Sense configuration: Sense both edges
+	// Pin5 Inverted: Off
+	// Pin5 Slew Rate Limitation: Off
+	PORTC.PIN5CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4a2:	15 8a       	std	Z+21, r1	; 0x15
+	// Pin6 Output/Pull configuration: Totempole/No
+	// Pin6 Input/Sense configuration: Sense both edges
+	// Pin6 Inverted: Off
+	// Pin6 Slew Rate Limitation: Off
+	PORTC.PIN6CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4a4:	16 8a       	std	Z+22, r1	; 0x16
+	// Pin7 Output/Pull configuration: Totempole/No
+	// Pin7 Input/Sense configuration: Sense both edges
+	// Pin7 Inverted: Off
+	// Pin7 Slew Rate Limitation: Off
+	PORTC.PIN7CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4a6:	17 8a       	std	Z+23, r1	; 0x17
+	// USART0 XCK: Pin 1
+	// USART0 RXD: Pin 2
+	// USART0 TXD: Pin 3
+	// SPI MOSI: Pin 5
+	// SPI SCK: Pin 7
+	PORTC.REMAP = (0 << PORT_SPI_bp) | (0 << PORT_USART0_bp) | (0 << PORT_TC0D_bp) | (0 << PORT_TC0C_bp) | (0 << PORT_TC0B_bp) | (0 << PORT_TC0A_bp);
+ 4a8:	16 86       	std	Z+14, r1	; 0x0e
+	// Interrupt 0 level: Disabled
+	// Interrupt 1 level: Disabled
+	PORTC.INTCTRL = (PORTC.INTCTRL & (~(PORT_INT1LVL_gm | PORT_INT0LVL_gm))) |
+ 4aa:	81 85       	ldd	r24, Z+9	; 0x09
+					PORT_INT1LVL_OFF_gc | PORT_INT0LVL_OFF_gc;
+ 4ac:	80 7f       	andi	r24, 0xF0	; 240
+ 4ae:	81 87       	std	Z+9, r24	; 0x09
+	// Pin3 Pin Change interrupt 0: Off
+	// Pin4 Pin Change interrupt 0: Off
+	// Pin5 Pin Change interrupt 0: Off
+	// Pin6 Pin Change interrupt 0: Off
+	// Pin7 Pin Change interrupt 0: Off
+	PORTC.INT0MASK = 0x00;
+ 4b0:	12 86       	std	Z+10, r1	; 0x0a
+	// Pin3 Pin Change interrupt 1: Off
+	// Pin4 Pin Change interrupt 1: Off
+	// Pin5 Pin Change interrupt 1: Off
+	// Pin6 Pin Change interrupt 1: Off
+	// Pin7 Pin Change interrupt 1: Off
+	PORTC.INT1MASK = 0x00;
+ 4b2:	13 86       	std	Z+11, r1	; 0x0b
+
+	// PORTD initialization
+	// OUT register
+	PORTD.OUT = 0x00;
+ 4b4:	e0 e6       	ldi	r30, 0x60	; 96
+ 4b6:	f6 e0       	ldi	r31, 0x06	; 6
+ 4b8:	14 82       	std	Z+4, r1	; 0x04
+	// Pin3: Input
+	// Pin4: Input
+	// Pin5: Input
+	// Pin6: Input
+	// Pin7: Input
+	PORTD.DIR = 0x00;
+ 4ba:	10 82       	st	Z, r1
+	// Pin0 Output/Pull configuration: Totempole/No
+	// Pin0 Input/Sense configuration: Sense both edges
+	// Pin0 Inverted: Off
+	// Pin0 Slew Rate Limitation: Off
+	PORTD.PIN0CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4bc:	10 8a       	std	Z+16, r1	; 0x10
+	// Pin1 Output/Pull configuration: Totempole/No
+	// Pin1 Input/Sense configuration: Sense both edges
+	// Pin1 Inverted: Off
+	// Pin1 Slew Rate Limitation: Off
+	PORTD.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4be:	11 8a       	std	Z+17, r1	; 0x11
+	// Pin2 Output/Pull configuration: Totempole/No
+	// Pin2 Input/Sense configuration: Sense both edges
+	// Pin2 Inverted: Off
+	// Pin2 Slew Rate Limitation: Off
+	PORTD.PIN2CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4c0:	12 8a       	std	Z+18, r1	; 0x12
+	// Pin3 Output/Pull configuration: Totempole/No
+	// Pin3 Input/Sense configuration: Sense both edges
+	// Pin3 Inverted: Off
+	// Pin3 Slew Rate Limitation: Off
+	PORTD.PIN3CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4c2:	13 8a       	std	Z+19, r1	; 0x13
+	// Pin4 Output/Pull configuration: Totempole/No
+	// Pin4 Input/Sense configuration: Sense both edges
+	// Pin4 Inverted: Off
+	// Pin4 Slew Rate Limitation: Off
+	PORTD.PIN4CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4c4:	14 8a       	std	Z+20, r1	; 0x14
+	// Pin5 Output/Pull configuration: Totempole/No
+	// Pin5 Input/Sense configuration: Sense both edges
+	// Pin5 Inverted: Off
+	// Pin5 Slew Rate Limitation: Off
+	PORTD.PIN5CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4c6:	15 8a       	std	Z+21, r1	; 0x15
+	// Pin6 Output/Pull configuration: Totempole/No
+	// Pin6 Input/Sense configuration: Sense both edges
+	// Pin6 Inverted: Off
+	// Pin6 Slew Rate Limitation: Off
+	PORTD.PIN6CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4c8:	16 8a       	std	Z+22, r1	; 0x16
+	// Pin7 Output/Pull configuration: Totempole/No
+	// Pin7 Input/Sense configuration: Sense both edges
+	// Pin7 Inverted: Off
+	// Pin7 Slew Rate Limitation: Off
+	PORTD.PIN7CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4ca:	17 8a       	std	Z+23, r1	; 0x17
+	// Interrupt 0 level: Disabled
+	// Interrupt 1 level: Disabled
+	PORTD.INTCTRL = (PORTD.INTCTRL & (~(PORT_INT1LVL_gm | PORT_INT0LVL_gm))) |
+ 4cc:	81 85       	ldd	r24, Z+9	; 0x09
+					PORT_INT1LVL_OFF_gc | PORT_INT0LVL_OFF_gc;
+ 4ce:	80 7f       	andi	r24, 0xF0	; 240
+ 4d0:	81 87       	std	Z+9, r24	; 0x09
+	// Pin3 Pin Change interrupt 0: Off
+	// Pin4 Pin Change interrupt 0: Off
+	// Pin5 Pin Change interrupt 0: Off
+	// Pin6 Pin Change interrupt 0: Off
+	// Pin7 Pin Change interrupt 0: Off
+	PORTD.INT0MASK = 0x00;
+ 4d2:	12 86       	std	Z+10, r1	; 0x0a
+	// Pin3 Pin Change interrupt 1: Off
+	// Pin4 Pin Change interrupt 1: Off
+	// Pin5 Pin Change interrupt 1: Off
+	// Pin6 Pin Change interrupt 1: Off
+	// Pin7 Pin Change interrupt 1: Off
+	PORTD.INT1MASK = 0x00;
+ 4d4:	13 86       	std	Z+11, r1	; 0x0b
+
+	// PORTE initialization
+	// OUT register
+	PORTE.OUT = 0x08;
+ 4d6:	e0 e8       	ldi	r30, 0x80	; 128
+ 4d8:	f6 e0       	ldi	r31, 0x06	; 6
+ 4da:	88 e0       	ldi	r24, 0x08	; 8
+ 4dc:	84 83       	std	Z+4, r24	; 0x04
+	// Pin0: Input
+	// Pin1: Input
+	// Pin2: Input
+	// Pin3: Output
+	PORTE.DIR = 0x08;
+ 4de:	80 83       	st	Z, r24
+	// Pin0 Output/Pull configuration: Totempole/No
+	// Pin0 Input/Sense configuration: Sense both edges
+	// Pin0 Inverted: Off
+	// Pin0 Slew Rate Limitation: Off
+	PORTE.PIN0CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4e0:	10 8a       	std	Z+16, r1	; 0x10
+	// Pin1 Output/Pull configuration: Totempole/No
+	// Pin1 Input/Sense configuration: Sense both edges
+	// Pin1 Inverted: Off
+	// Pin1 Slew Rate Limitation: Off
+	PORTE.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4e2:	11 8a       	std	Z+17, r1	; 0x11
+	// Pin2 Output/Pull configuration: Totempole/No
+	// Pin2 Input/Sense configuration: Sense both edges
+	// Pin2 Inverted: Off
+	// Pin2 Slew Rate Limitation: Off
+	PORTE.PIN2CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4e4:	12 8a       	std	Z+18, r1	; 0x12
+	// Pin3 Output/Pull configuration: Totempole/No
+	// Pin3 Input/Sense configuration: Sense both edges
+	// Pin3 Inverted: Off
+	// Pin3 Slew Rate Limitation: Off
+	PORTE.PIN3CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4e6:	13 8a       	std	Z+19, r1	; 0x13
+	// Interrupt 0 level: Disabled
+	// Interrupt 1 level: Disabled
+	PORTE.INTCTRL = (PORTE.INTCTRL & (~(PORT_INT1LVL_gm | PORT_INT0LVL_gm))) |
+ 4e8:	81 85       	ldd	r24, Z+9	; 0x09
+					PORT_INT1LVL_OFF_gc | PORT_INT0LVL_OFF_gc;
+ 4ea:	80 7f       	andi	r24, 0xF0	; 240
+ 4ec:	81 87       	std	Z+9, r24	; 0x09
+	// Pin0 Pin Change interrupt 0: Off
+	// Pin1 Pin Change interrupt 0: Off
+	// Pin2 Pin Change interrupt 0: Off
+	// Pin3 Pin Change interrupt 0: Off
+	PORTE.INT0MASK = 0x00;
+ 4ee:	12 86       	std	Z+10, r1	; 0x0a
+	// Pin0 Pin Change interrupt 1: Off
+	// Pin1 Pin Change interrupt 1: Off
+	// Pin2 Pin Change interrupt 1: Off
+	// Pin3 Pin Change interrupt 1: Off
+	PORTE.INT1MASK = 0x00;
+ 4f0:	13 86       	std	Z+11, r1	; 0x0b
+
+	// PORTR initialization
+	// OUT register
+	PORTR.OUT = 0x00;
+ 4f2:	e0 ee       	ldi	r30, 0xE0	; 224
+ 4f4:	f7 e0       	ldi	r31, 0x07	; 7
+ 4f6:	14 82       	std	Z+4, r1	; 0x04
+	// Pin0: Input
+	// Pin1: Input
+	PORTR.DIR = 0x00;
+ 4f8:	10 82       	st	Z, r1
+	// Pin0 Output/Pull configuration: Totempole/No
+	// Pin0 Input/Sense configuration: Sense both edges
+	// Pin0 Inverted: Off
+	// Pin0 Slew Rate Limitation: Off
+	PORTR.PIN0CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4fa:	10 8a       	std	Z+16, r1	; 0x10
+	// Pin1 Output/Pull configuration: Totempole/No
+	// Pin1 Input/Sense configuration: Sense both edges
+	// Pin1 Inverted: Off
+	// Pin1 Slew Rate Limitation: Off
+	PORTR.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_BOTHEDGES_gc;
+ 4fc:	11 8a       	std	Z+17, r1	; 0x11
+	// Interrupt 0 level: Disabled
+	// Interrupt 1 level: Disabled
+	PORTR.INTCTRL = (PORTR.INTCTRL & (~(PORT_INT1LVL_gm | PORT_INT0LVL_gm))) |
+ 4fe:	81 85       	ldd	r24, Z+9	; 0x09
+					PORT_INT1LVL_OFF_gc | PORT_INT0LVL_OFF_gc;
+ 500:	80 7f       	andi	r24, 0xF0	; 240
+ 502:	81 87       	std	Z+9, r24	; 0x09
+	// Pin0 Pin Change interrupt 0: Off
+	// Pin1 Pin Change interrupt 0: Off
+	PORTR.INT0MASK = 0x00;
+ 504:	12 86       	std	Z+10, r1	; 0x0a
+	// Pin0 Pin Change interrupt 1: Off
+	// Pin1 Pin Change interrupt 1: Off
+	PORTR.INT1MASK = 0x00;
+ 506:	13 86       	std	Z+11, r1	; 0x0b
+ 508:	08 95       	ret
+
+0000050a <_Z11vports_initv>:
+// Virtual Ports initialization
+void vports_init(void)
+{
+	// PORTA mapped to VPORT0
+	// PORTB mapped to VPORT1
+	PORTCFG.VPCTRLA = PORTCFG_VP13MAP_PORTB_gc | PORTCFG_VP02MAP_PORTA_gc;
+ 50a:	e0 eb       	ldi	r30, 0xB0	; 176
+ 50c:	f0 e0       	ldi	r31, 0x00	; 0
+ 50e:	80 e1       	ldi	r24, 0x10	; 16
+ 510:	82 83       	std	Z+2, r24	; 0x02
+	// PORTC mapped to VPORT2
+	// PORTD mapped to VPORT3
+	PORTCFG.VPCTRLB = PORTCFG_VP13MAP_PORTD_gc | PORTCFG_VP02MAP_PORTC_gc;
+ 512:	82 e3       	ldi	r24, 0x32	; 50
+ 514:	83 83       	std	Z+3, r24	; 0x03
+ 516:	08 95       	ret
+
+00000518 <_ZN6SerialC1EP12USART_structP11PORT_struct>:
+
+// USARTs initialization functions
+#include "serial.h"
+
+//
+Serial::Serial(USART_t * usart, PORT_t * port) {
+ 518:	fc 01       	movw	r30, r24
+	_usart = usart;
+ 51a:	60 83       	st	Z, r22
+ 51c:	71 83       	std	Z+1, r23	; 0x01
+	_port = port;
+ 51e:	42 83       	std	Z+2, r20	; 0x02
+ 520:	53 83       	std	Z+3, r21	; 0x03
+	// Note: The correct PORTE direction for the RxD, TxD and XCK signals
+	// is configured in the ports_init function.
+
+	// Transmitter is enabled
+	// Set TxD=1
+	_port->OUTSET = 0x08;
+ 522:	88 e0       	ldi	r24, 0x08	; 8
+ 524:	da 01       	movw	r26, r20
+ 526:	15 96       	adiw	r26, 0x05	; 5
+ 528:	8c 93       	st	X, r24
+
+	// Communication mode: Asynchronous USART
+	// Data bits: 8
+	// Stop bits: 1
+	// Parity: Disabled
+	_usart->CTRLC = USART_CMODE_ASYNCHRONOUS_gc | USART_PMODE_DISABLED_gc | USART_CHSIZE_8BIT_gc;
+ 52a:	a0 81       	ld	r26, Z
+ 52c:	b1 81       	ldd	r27, Z+1	; 0x01
+ 52e:	83 e0       	ldi	r24, 0x03	; 3
+ 530:	15 96       	adiw	r26, 0x05	; 5
+ 532:	8c 93       	st	X, r24
+
+	// Receive complete interrupt: Disabled
+	// Transmit complete interrupt: Disabled
+	// Data register empty interrupt: Disabled
+	_usart->CTRLA = (_usart->CTRLA & (~(USART_RXCINTLVL_gm | USART_TXCINTLVL_gm | USART_DREINTLVL_gm))) |
+ 534:	a0 81       	ld	r26, Z
+ 536:	b1 81       	ldd	r27, Z+1	; 0x01
+ 538:	13 96       	adiw	r26, 0x03	; 3
+ 53a:	8c 91       	ld	r24, X
+ 53c:	13 97       	sbiw	r26, 0x03	; 3
+		USART_RXCINTLVL_LO_gc | USART_TXCINTLVL_OFF_gc | USART_DREINTLVL_OFF_gc;
+ 53e:	80 7c       	andi	r24, 0xC0	; 192
+ 540:	80 61       	ori	r24, 0x10	; 16
+ 542:	13 96       	adiw	r26, 0x03	; 3
+ 544:	8c 93       	st	X, r24
+
+	// Required Baud rate: 9600
+	// Real Baud Rate: 9600.0 (x1 Mode), Error: 0.0 %
+	_usart->BAUDCTRLA = 0x17;
+ 546:	a0 81       	ld	r26, Z
+ 548:	b1 81       	ldd	r27, Z+1	; 0x01
+ 54a:	87 e1       	ldi	r24, 0x17	; 23
+ 54c:	16 96       	adiw	r26, 0x06	; 6
+ 54e:	8c 93       	st	X, r24
+	_usart->BAUDCTRLB = ((0x01 << USART_BSCALE_gp) & USART_BSCALE_gm) | 0x00;
+ 550:	a0 81       	ld	r26, Z
+ 552:	b1 81       	ldd	r27, Z+1	; 0x01
+ 554:	80 e1       	ldi	r24, 0x10	; 16
+ 556:	17 96       	adiw	r26, 0x07	; 7
+ 558:	8c 93       	st	X, r24
+
+	// Receiver: On
+	// Transmitter: On
+	// Double transmission speed mode: Off
+	// Multi-processor communication mode: Off
+	_usart->CTRLB = (_usart->CTRLB & (~(USART_RXEN_bm | USART_TXEN_bm | USART_CLK2X_bm | USART_MPCM_bm | USART_TXB8_bm))) |
+ 55a:	a0 81       	ld	r26, Z
+ 55c:	b1 81       	ldd	r27, Z+1	; 0x01
+ 55e:	14 96       	adiw	r26, 0x04	; 4
+ 560:	8c 91       	ld	r24, X
+ 562:	14 97       	sbiw	r26, 0x04	; 4
+		USART_RXEN_bm | USART_TXEN_bm;
+ 564:	80 7e       	andi	r24, 0xE0	; 224
+ 566:	88 61       	ori	r24, 0x18	; 24
+ 568:	14 96       	adiw	r26, 0x04	; 4
+ 56a:	8c 93       	st	X, r24
+	
+	_rx_buffer_head = _rx_buffer_tail = 0;
+ 56c:	df 01       	movw	r26, r30
+ 56e:	ac 5f       	subi	r26, 0xFC	; 252
+ 570:	be 4f       	sbci	r27, 0xFE	; 254
+ 572:	1c 92       	st	X, r1
+ 574:	eb 5f       	subi	r30, 0xFB	; 251
+ 576:	fe 4f       	sbci	r31, 0xFE	; 254
+ 578:	10 82       	st	Z, r1
+ 57a:	08 95       	ret
+
+0000057c <_ZN6SerialD1Ev>:
+}
+
+//
+Serial::~Serial() {
+ 57c:	08 95       	ret
+
+0000057e <_ZN6Serial4recvEv>:
+	
+}
+
+void Serial::recv() {
+	uint8_t status = _usart->STATUS;
+ 57e:	dc 01       	movw	r26, r24
+ 580:	ed 91       	ld	r30, X+
+ 582:	fc 91       	ld	r31, X
+ 584:	11 97       	sbiw	r26, 0x01	; 1
+ 586:	21 81       	ldd	r18, Z+1	; 0x01
+	if ((status & USART_RXCIF_bm) == 0) return;
+ 588:	22 23       	and	r18, r18
+ 58a:	9c f4       	brge	.+38     	; 0x5b2 <_ZN6Serial4recvEv+0x34>
+	if ((status & (USART_FERR_bm | USART_PERR_bm | USART_BUFOVF_bm)) == 0) {
+ 58c:	2c 71       	andi	r18, 0x1C	; 28
+ 58e:	89 f4       	brne	.+34     	; 0x5b2 <_ZN6Serial4recvEv+0x34>
+		uint8_t c = _usart->DATA;
+ 590:	50 81       	ld	r21, Z
+		uint8_t next = (_rx_buffer_tail + 1) % _MAX_RX_BUFF_SIZE;
+ 592:	fc 01       	movw	r30, r24
+ 594:	ec 5f       	subi	r30, 0xFC	; 252
+ 596:	fe 4f       	sbci	r31, 0xFE	; 254
+ 598:	20 81       	ld	r18, Z
+ 59a:	2f 5f       	subi	r18, 0xFF	; 255
+		if (next != _rx_buffer_head) {
+ 59c:	31 96       	adiw	r30, 0x01	; 1
+ 59e:	40 81       	ld	r20, Z
+ 5a0:	42 17       	cp	r20, r18
+ 5a2:	39 f0       	breq	.+14     	; 0x5b2 <_ZN6Serial4recvEv+0x34>
+			_rx_buffer[_rx_buffer_tail] = c;
+ 5a4:	31 97       	sbiw	r30, 0x01	; 1
+ 5a6:	30 81       	ld	r19, Z
+ 5a8:	a3 0f       	add	r26, r19
+ 5aa:	b1 1d       	adc	r27, r1
+ 5ac:	14 96       	adiw	r26, 0x04	; 4
+ 5ae:	5c 93       	st	X, r21
+			_rx_buffer_tail = next;
+ 5b0:	20 83       	st	Z, r18
+ 5b2:	08 95       	ret
+
+000005b4 <_ZN6Serial5writeEh>:
+		}
+	}
+}
+
+void Serial::write(uint8_t byte) {
+	if ((_usart->STATUS & USART_DREIF_bm) == 0) return;
+ 5b4:	dc 01       	movw	r26, r24
+ 5b6:	ed 91       	ld	r30, X+
+ 5b8:	fc 91       	ld	r31, X
+ 5ba:	81 81       	ldd	r24, Z+1	; 0x01
+ 5bc:	85 fd       	sbrc	r24, 5
+	_usart->DATA = byte;
+ 5be:	60 83       	st	Z, r22
+ 5c0:	08 95       	ret
+
+000005c2 <_ZN6Serial4readEv>:
+}
+
+uint8_t Serial::read() {	
+	if (_rx_buffer_head == _rx_buffer_tail) return -1;
+ 5c2:	fc 01       	movw	r30, r24
+ 5c4:	eb 5f       	subi	r30, 0xFB	; 251
+ 5c6:	fe 4f       	sbci	r31, 0xFE	; 254
+ 5c8:	30 81       	ld	r19, Z
+ 5ca:	31 97       	sbiw	r30, 0x01	; 1
+ 5cc:	20 81       	ld	r18, Z
+ 5ce:	32 17       	cp	r19, r18
+ 5d0:	61 f0       	breq	.+24     	; 0x5ea <_ZN6Serial4readEv+0x28>
+	
+	uint8_t c = _rx_buffer[_rx_buffer_head];
+ 5d2:	31 96       	adiw	r30, 0x01	; 1
+ 5d4:	20 81       	ld	r18, Z
+ 5d6:	dc 01       	movw	r26, r24
+ 5d8:	a2 0f       	add	r26, r18
+ 5da:	b1 1d       	adc	r27, r1
+ 5dc:	14 96       	adiw	r26, 0x04	; 4
+ 5de:	4c 91       	ld	r20, X
+	_rx_buffer_head = (_rx_buffer_head + 1) % _MAX_RX_BUFF_SIZE;
+ 5e0:	20 81       	ld	r18, Z
+ 5e2:	2f 5f       	subi	r18, 0xFF	; 255
+ 5e4:	20 83       	st	Z, r18
+	
+	return c;
+ 5e6:	84 2f       	mov	r24, r20
+ 5e8:	08 95       	ret
+	if ((_usart->STATUS & USART_DREIF_bm) == 0) return;
+	_usart->DATA = byte;
+}
+
+uint8_t Serial::read() {	
+	if (_rx_buffer_head == _rx_buffer_tail) return -1;
+ 5ea:	8f ef       	ldi	r24, 0xFF	; 255
+	
+	uint8_t c = _rx_buffer[_rx_buffer_head];
+	_rx_buffer_head = (_rx_buffer_head + 1) % _MAX_RX_BUFF_SIZE;
+	
+	return c;
+}
+ 5ec:	08 95       	ret
+
+000005ee <_ZN6Serial9availableEv>:
+
+bool Serial::available()
+{
+	return (_rx_buffer_tail + _MAX_RX_BUFF_SIZE - _rx_buffer_head) % _MAX_RX_BUFF_SIZE;
+ 5ee:	fc 01       	movw	r30, r24
+ 5f0:	ec 5f       	subi	r30, 0xFC	; 252
+ 5f2:	fe 4f       	sbci	r31, 0xFE	; 254
+ 5f4:	20 81       	ld	r18, Z
+ 5f6:	31 96       	adiw	r30, 0x01	; 1
+ 5f8:	90 81       	ld	r25, Z
+ 5fa:	81 e0       	ldi	r24, 0x01	; 1
+ 5fc:	29 13       	cpse	r18, r25
+ 5fe:	01 c0       	rjmp	.+2      	; 0x602 <_ZN6Serial9availableEv+0x14>
+ 600:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 602:	08 95       	ret
+
+00000604 <__tablejump2__>:
+ 604:	ee 0f       	add	r30, r30
+ 606:	ff 1f       	adc	r31, r31
+ 608:	05 90       	lpm	r0, Z+
+ 60a:	f4 91       	lpm	r31, Z
+ 60c:	e0 2d       	mov	r30, r0
+ 60e:	09 94       	ijmp
+
+00000610 <__do_global_dtors>:
+ 610:	11 e0       	ldi	r17, 0x01	; 1
+ 612:	cf ef       	ldi	r28, 0xFF	; 255
+ 614:	d0 e0       	ldi	r29, 0x00	; 0
+ 616:	04 c0       	rjmp	.+8      	; 0x620 <__do_global_dtors+0x10>
+ 618:	fe 01       	movw	r30, r28
+ 61a:	0e 94 02 03 	call	0x604	; 0x604 <__tablejump2__>
+ 61e:	21 96       	adiw	r28, 0x01	; 1
+ 620:	c0 30       	cpi	r28, 0x00	; 0
+ 622:	d1 07       	cpc	r29, r17
+ 624:	c9 f7       	brne	.-14     	; 0x618 <__do_global_dtors+0x8>
+ 626:	f8 94       	cli
+
+00000628 <__stop_program>:
+ 628:	ff cf       	rjmp	.-2      	; 0x628 <__stop_program>
