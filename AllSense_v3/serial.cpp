@@ -1,5 +1,5 @@
 /*******************************************************
-© Copyright 2018 Teodor Garzdin
+Â© Copyright 2018 Teodor Garzdin
 
 Project : AllSense v3
 *******************************************************/
@@ -13,6 +13,8 @@ Project : AllSense v3
 
 //
 Serial::Serial(USART_t * usart, PORT_t * port) {
+	cli();
+	
 	_usart = usart;
 	_port = port;
 	
@@ -48,11 +50,15 @@ Serial::Serial(USART_t * usart, PORT_t * port) {
 		USART_RXEN_bm | USART_TXEN_bm;
 	
 	_rx_buffer_head = _rx_buffer_tail = 0;
+	
+	sei();
 }
 
 //
 Serial::~Serial() {
-	
+	free(_usart);
+	free(_port);
+	free(_rx_buffer);
 }
 
 void Serial::recv() {
@@ -76,13 +82,23 @@ void Serial::write(uint8_t byte) {
 uint8_t Serial::read() {	
 	if (_rx_buffer_head == _rx_buffer_tail) return -1;
 	
+	cli();
+	
 	uint8_t c = _rx_buffer[_rx_buffer_head];
 	_rx_buffer_head = (_rx_buffer_head + 1) % _MAX_RX_BUFF_SIZE;
+	
+	sei();
 	
 	return c;
 }
 
 bool Serial::available()
 {
-	return (_rx_buffer_tail + _MAX_RX_BUFF_SIZE - _rx_buffer_head) % _MAX_RX_BUFF_SIZE;
+	cli();
+	
+	uint8_t is_available = (_rx_buffer_tail + _MAX_RX_BUFF_SIZE - _rx_buffer_head) % _MAX_RX_BUFF_SIZE;
+	
+	sei();
+	
+	return is_available;
 }
