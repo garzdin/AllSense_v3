@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+buffer.cpp
+
 clock_init.cpp
 
 event_system_init.cpp
