@@ -37,6 +37,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../buffer.cpp \
 ../clock_init.cpp \
 ../event_system_init.cpp \
 ../main.cpp \
@@ -52,6 +53,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+buffer.o \
 clock_init.o \
 event_system_init.o \
 main.o \
@@ -60,6 +62,7 @@ serial.o \
 usart_test.o
 
 OBJS_AS_ARGS +=  \
+buffer.o \
 clock_init.o \
 event_system_init.o \
 main.o \
@@ -68,6 +71,7 @@ serial.o \
 usart_test.o
 
 C_DEPS +=  \
+buffer.d \
 clock_init.d \
 event_system_init.d \
 main.d \
@@ -76,6 +80,7 @@ serial.d \
 usart_test.d
 
 C_DEPS_AS_ARGS +=  \
+buffer.d \
 clock_init.d \
 event_system_init.d \
 main.d \
@@ -97,6 +102,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

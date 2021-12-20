@@ -14,7 +14,8 @@
 #include "ports_init.h"
 #include "serial.h"
 
-Serial debug(&USARTE0, &PORTE);
+Serial debug(&USARTE0, F_BAUD, F_CPU);
+Serial gsm(&USARTC0, F_BAUD, F_CPU);
 
 int main(void)
 {
@@ -42,40 +43,33 @@ int main(void)
 	
     /* Replace with your application code */
     while (1) 
-    {
+    {	
 		loop();
     }
 }
 
 void loop() {
-	if (debug.available()) {
-		uint8_t c = debug.read();
-		switch (c) {
-			case 'H':
-				debug.write('H');
-				debug.write('e');
-				debug.write('l');
-				debug.write('l');
-				debug.write('o');
-				debug.write('\r');
-				debug.write('\n');
-			break;
-			default:
-				debug.write('U');
-				debug.write('n');
-				debug.write('k');
-				debug.write('n');
-				debug.write('o');
-				debug.write('w');
-				debug.write('n');
-				debug.write('\r');
-				debug.write('\n');
-			break;
-		}
+	debug.write('I');
+	debug.write('n');
+	debug.write('i');
+	debug.write('t');
+	debug.write('\r');
+	debug.write('\n');
+	
+	gsm.write('A');
+	gsm.write('T');
+	gsm.write('\r');
+	
+	while (gsm.available()) {
+		debug.write(gsm.read());
 	}
 }
 
 ISR(USARTE0_RXC_vect)
 {
 	debug.recv();
+}
+
+ISR(USARTE0_TXC_vect) {
+	debug.send();
 }
